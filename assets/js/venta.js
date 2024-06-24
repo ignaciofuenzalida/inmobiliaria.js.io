@@ -1,4 +1,4 @@
-const propiedades_ventas = [
+const propiedades_venta = [
     {
     nombre: "Apartamento de lujo en zona exclusiva",
     src: "https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg",
@@ -72,8 +72,7 @@ const propiedades_ventas = [
     },
      ]
 
-
-     const template = document.querySelector('#ventas');
+     const template = document.querySelector('#venta');
 
      let html = ''
  
@@ -114,4 +113,3 @@ const propiedades_ventas = [
                  }
  
      template.innerHTML = html;
- 
