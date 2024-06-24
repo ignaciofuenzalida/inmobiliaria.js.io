@@ -141,7 +141,7 @@ const propiedades_venta = [
         }
     ];
     
-  
+
 const template_venta = document.querySelector('#venta')
 
 let html= ''
@@ -187,11 +187,11 @@ for(let i = 0 ; i < 3;++i){
 template_venta.innerHTML = html;
 
 const template_alquiler = document.querySelector('#alquiler')
-let html1= ''
+let html2= ''
 
 for( let i = 0; i<3;++i){
     const alquiler = propiedades_alquiler[i]
-    html1+=          
+    html2+=          
     `<div class="col-md-4 mb-4">
     <div class="card">
       <img
@@ -225,4 +225,4 @@ for( let i = 0; i<3;++i){
         </div>
     </div>`
 }
-template_alquiler.innerHTML = html1;
+template_alquiler.innerHTML = html2;
