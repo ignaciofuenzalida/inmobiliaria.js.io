@@ -1,4 +1,4 @@
-const casas_ventas = [
+const Propiedades_ventas = [
     {
     nombre: "Apartamento de lujo en zona exclusiva",
     src: "https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg",
@@ -145,11 +145,11 @@ const casas_ventas = [
         ]
     
 
-        const template_venta = document.querySelector('#venta')
+        const template_venta = document.querySelector('#ventas')
         let html= ''
    
         for(let i = 0 ; i < 3;++i){
-           const casas_ventas = casas_venta[i]
+           const propiedades_ventas = propiedades_venta[i]
            html+=
            `<div class="col-md-4 mb-4">
               <div class="card">
@@ -160,24 +160,24 @@ const casas_ventas = [
                 />
                 <div class="card-body">
                   <h5 class="card-title">
-                      ${casas_ventas.nombre}
+                      ${propiedades_ventas.nombre}
                   </h5>
                   <p class="card-text">
-                      ${casas_ventas.descripcion}
+                      ${propiedades_ventas.descripcion}
                   </p>
                   <p>
                     <i class="fas fa-map-marker-alt"></i> 
-                    ${casas_ventas.ubicacion}
+                    ${propiedades_ventas.ubicacion}
                   </p>
                   <p>
                     <i class="fas fa-bed"></i> ${casas_ventas.habitaciones} Habitaciones |
                     <i class="fas fa-bath"></i> ${casas_ventas.baño} Baños
                   </p>
                   <p><i class="fas fa-dollar-sign"></i>${casas_ventas.costo}</p>
-                  ${casas_ventas.smoke ? 
+                  ${propiedades_ventas.smoke ? 
                       `<p class="text-success"><i class="fas fa-smoking"></i> Permitido fumar</p>` : 
                       `<p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>`}
-                  ${casas_ventas.pets ? 
+                  ${propiedades_ventas.pets ? 
                       `<p class="text-success"><i class="fas fa-paw"></i> Mascotas permitidas</p>` : 
                       `<p class="text-danger"><i class="fas fa-ban"></i> No se permiten mascotas</p>`}
                   </div>
@@ -188,39 +188,39 @@ const casas_ventas = [
    
    
    
-   const template_alquiler = document.querySelector('#alquiler')
+   const template_alquiler = document.querySelector('#alquileres')
    let html1= ''
    
    for( let i = 0; i<3;++i){
-       const alquiler = casas_alquiler[i]
-       html2+=          
+       const alquiler = propiedades_alquiler[i]
+       html1+=          
        `<div class="col-md-4 mb-4">
        <div class="card">
          <img
-           src= ${alquiler.src}
+           src= ${alquileres.src}
            class="card-img-top"
            alt="Imagen del departamento"
          />
          <div class="card-body">
            <h5 class="card-title">
-               ${alquiler.nombre}
+               ${alquileres.nombre}
            </h5>
            <p class="card-text">
-               ${alquiler.descripcion}
+               ${alquileres.descripcion}
            </p>
            <p>
              <i class="fas fa-map-marker-alt"></i> 
-             ${alquiler.ubicacion}
+             ${alquileres.ubicacion}
            </p>
            <p>
-             <i class="fas fa-bed"></i> ${alquiler.habitaciones} Habitaciones |
-             <i class="fas fa-bath"></i> ${alquiler.baño} Baños
+             <i class="fas fa-bed"></i> ${alquileres.habitaciones} Habitaciones |
+             <i class="fas fa-bath"></i> ${alquileres.baño} Baños
            </p>
-           <p><i class="fas fa-dollar-sign"></i>${alquiler.costo}</p>
-           ${alquiler.smoke ? 
+           <p><i class="fas fa-dollar-sign"></i>${alquileres.costo}</p>
+           ${alquileres.smoke ? 
                `<p class="text-success"><i class="fas fa-smoking"></i> Permitido fumar</p>` : 
                `<p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>`}
-           ${alquiler.pets ? 
+           ${alquileres.pets ? 
                `<p class="text-success"><i class="fas fa-paw"></i> Mascotas permitidas</p>` : 
                `<p class="text-danger"><i class="fas fa-ban"></i> No se permiten mascotas</p>`}
            </div>

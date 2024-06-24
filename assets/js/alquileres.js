@@ -1,4 +1,4 @@
-const casas_alquiler = [
+const propiedades_alquiler = [
     {
     nombre: "apartamento en el centro de la ciudad",
     src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=700&q=60",
@@ -69,38 +69,38 @@ const casas_alquiler = [
              
     ]
 
-    const template = document.querySelector('#casas_alquiler')
+    const template = document.querySelector('#alquileres')
     let html = ''
     
-    for(propiedades.alquiler of propiedades.alquiler){
+    for(alquileres of propiedades_alquiler){
         html+=
              `<div class="col-md-4 mb-4">
                 <div class="card">
                   <img
-                    src= ${propiedades.alquiler.src}
+                    src= ${alquileres.src}
                     class="card-img-top"
                     alt="Imagen del departamento"
                   />
                   <div class="card-body">
                     <h5 class="card-title">
-                        ${propiedades.alquiler.nombre}
+                        ${alquileres.nombre}
                     </h5>
                     <p class="card-text">
-                        ${propiedades.alquiler.descripcion}
+                        ${alquileres.descripcion}
                     </p>
                     <p>
                       <i class="fas fa-map-marker-alt"></i> 
-                      ${propiedasdes.alquiler.ubicacion}
+                      ${alquileres.ubicacion}
                     </p>
                     <p>
-                      <i class="fas fa-bed"></i> ${propiedades.alquiler.habitaciones} Habitaciones |
-                      <i class="fas fa-bath"></i> ${casas_alquiler.baño} Baños
+                      <i class="fas fa-bed"></i> ${alquileres.habitaciones} Habitaciones |
+                      <i class="fas fa-bath"></i> ${alquileres.baño} Baños
                     </p>
-                    <p><i class="fas fa-dollar-sign"></i>${casas_alquiler.costo}</p>
-                    ${propiedades.alquiler.smoke ? 
+                    <p><i class="fas fa-dollar-sign"></i>${alquileres.costo}</p>
+                    ${alquileres.smoke ? 
                         `<p class="text-success"><i class="fas fa-smoking"></i> Permitido fumar</p>` : 
                         `<p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>`}
-                    ${propiedades.alquiler.pets ? 
+                    ${alquileres.pets ? 
                         `<p class="text-success"><i class="fas fa-paw"></i> Mascotas permitidas</p>` : 
                         `<p class="text-danger"><i class="fas fa-ban"></i> No se permiten mascotas</p>`}
                     </div>

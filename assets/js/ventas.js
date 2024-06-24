@@ -1,4 +1,4 @@
-const casas_ventas = [
+const propiedades_ventas = [
     {
     nombre: "Apartamento de lujo en zona exclusiva",
     src: "https://fotos.perfil.com/2018/09/21/trim/950/534/nueva-york-09212018-366965.jpg",
@@ -73,39 +73,39 @@ const casas_ventas = [
      ]
 
 
-     const template = document.querySelector('#casasventa');
+     const template = document.querySelector('#ventas');
 
      let html = ''
  
-     for(propiedades.ventas of propiedades.venta){
+     for(propiedades_ventas of propiedades_venta){
          html+=
           `<div class="col-md-4 mb-4">
              <div class="card">
                <img
-                 src= ${propiedades.ventas.src}
+                 src= ${propiedades_ventas.src}
                  class="card-img-top"
                  alt="Imagen del departamento"
                />
                <div class="card-body">
                  <h5 class="card-title">
-                     ${propiedades.ventas.nombre}
+                     ${propiedades_ventas.nombre}
                  </h5>
                  <p class="card-text">
-                     ${propiedades.ventas.descripcion}
+                     ${propiedades_ventas.descripcion}
                  </p>
                  <p>
                    <i class="fas fa-map-marker-alt"></i> 
-                   ${propiedades.ventas.ubicacion}
+                   ${propiedades_ventas.ubicacion}
                  </p>
                  <p>
-                   <i class="fas fa-bed"></i> ${propiedades.ventas.habitaciones} Habitaciones |
-                   <i class="fas fa-bath"></i> ${propiedades.ventas.baño} Baños
+                   <i class="fas fa-bed"></i> ${propiedades_ventas.habitaciones} Habitaciones |
+                   <i class="fas fa-bath"></i> ${propiedades_ventas.baño} Baños
                  </p>
-                 <p><i class="fas fa-dollar-sign"></i>${propiedades.ventas.costo}</p>
-                 ${propiedades.ventas.smoke ? 
+                 <p><i class="fas fa-dollar-sign"></i>${propiedades_ventas.costo}</p>
+                 ${propiedades_ventas.smoke ? 
                      `<p class="text-success"><i class="fas fa-smoking"></i> Permitido fumar</p>` : 
                      `<p class="text-danger"><i class="fas fa-smoking-ban"></i> No se permite fumar</p>`}
-                 ${propiedades.ventas.pets ? 
+                 ${propiedades_ventas.pets ? 
                      `<p class="text-success"><i class="fas fa-paw"></i> Mascotas permitidas</p>` : 
                      `<p class="text-danger"><i class="fas fa-ban"></i> No se permiten mascotas</p>`}
                  </div>
